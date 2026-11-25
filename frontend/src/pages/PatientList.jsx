@@ -3,7 +3,7 @@ import "./Table.css";
 
 const API = "http://localhost:8080/api/patients";
 
-function PatientList() {
+function PatientList({ onEdit }) {
     const [patients, setPatients] = useState([]);
     const [name, setName] = useState("");
     const [gender, setGender] = useState("");
@@ -68,6 +68,8 @@ function PatientList() {
                 </button>
             </form>
 
+            <p className="hint">Double click a patient to update their details.</p>
+
             {error && <div className="table-error">{error}</div>}
 
             <table className="patient-table">
@@ -90,7 +92,11 @@ function PatientList() {
                     </tr>
                 ) : (
                     patients.map((p) => (
-                        <tr key={p.id}>
+                        <tr
+                            key={p.id}
+                            className="clickable-row"
+                            onDoubleClick={() => onEdit(p)}
+                        >
                             <td>{p.id}</td>
                             <td>{p.name}</td>
                             <td>{p.age}</td>

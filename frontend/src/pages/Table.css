@@ -85,3 +85,13 @@
     font-size: 13px;
     margin-bottom: 16px;
 }
+
+.clickable-row {
+    cursor: pointer;
+}
+
+.hint {
+    color: #64748b;
+    font-size: 13px;
+    margin: 0 0 12px;
+}
