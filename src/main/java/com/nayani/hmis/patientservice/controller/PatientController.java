@@ -38,9 +38,9 @@ public class PatientController {
         return ResponseEntity.ok(patientService.searchByName(name));
     }
 
-    @GetMapping("/search/Gender")
-    public ResponseEntity<List<patient>> searchByGender(@RequestParam String name) {
-        return ResponseEntity.ok(patientService.searchByGender(name));
+    @GetMapping("/search/gender")
+    public ResponseEntity<List<patient>> searchByGender(@RequestParam String gender) {
+        return ResponseEntity.ok(patientService.searchByGender(gender));
     }
 
     @PutMapping("/{id}")
