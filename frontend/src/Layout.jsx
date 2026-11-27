@@ -4,6 +4,7 @@ const menuItems = [
     { key: "dashboard", label: "Dashboard" },
     { key: "register", label: "Register Patient" },
     { key: "patients", label: "Patient List" },
+    { key: "visits", label: "Visits" },
 ];
 
 function Layout({ activePage, onNavigate, onLogout, children }) {

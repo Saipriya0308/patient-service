@@ -4,6 +4,7 @@ import Layout from "./Layout";
 import Dashboard from "./pages/Dashboard";
 import RegisterPatient from "./pages/RegisterPatient";
 import PatientList from "./pages/PatientList";
+import Visits from "./pages/Visits";
 
 function App() {
     const [loggedIn, setLoggedIn] = useState(false);
@@ -50,6 +51,7 @@ function App() {
                 />
             )}
             {activePage === "patients" && <PatientList onEdit={handleEdit} />}
+            {activePage === "visits" && <Visits />}
         </Layout>
     );
 }
